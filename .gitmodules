@@ -1,3 +1,3 @@
 [submodule "site"]
 	path = site
-	url = ./site
+	url = git@git.luar.dcc.ufmg.br:lfs/physicsdemos.git
