@@ -14,6 +14,7 @@ services:
       - ./physicsdemos-data:/mnt/physicsdemos-data
     links:
       - mysql
+      - redis
   mysql:
     image: mysql
     container_name: physicsdemos.mysql
@@ -23,3 +24,6 @@ services:
       # The database files will be saved on the
       # host machine for persistency:
       - /var/lib/docker/physicsdemos.mysql:/var/lib/mysql
+  redis:
+    image: redis
+    container_name: physicsdemos.redis
