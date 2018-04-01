@@ -8,7 +8,7 @@ RUN apt-get update -yqq &&\
 RUN rm -f /etc/apache2/sites-enabled/*
 RUN cp /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/
 
-WORKDIR /etc/apache2
+WORKDIR /site
 
 EXPOSE 80
 
