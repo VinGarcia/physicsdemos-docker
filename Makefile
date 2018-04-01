@@ -1,13 +1,14 @@
 proj_name=physicsdemos
-container=$(proj_name).app
+container=app
+fullname=$(proj_name).$(container)
 
 login:
 	@# Login as root on netlex-site:
-	docker exec -it $(container) bash
+	docker exec -it $(fullname) bash
 
 up:
 	@# Always rebuild netlex-site on deploy:
-	docker stop $(container) &> /dev/null || true
+	docker stop $(fullname) &> /dev/null || true
 	docker-compose up -d
 
 down:
