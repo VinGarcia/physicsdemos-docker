@@ -1,4 +1,5 @@
-container=physicsdemos
+proj_name=physicsdemos
+container=$(proj_name).app
 
 login:
 	@# Login as root on netlex-site:

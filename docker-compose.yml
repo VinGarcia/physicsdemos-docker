@@ -4,10 +4,21 @@ services:
   site:
     build: .
     image: physicsdemos
-    container_name: physicsdemos
+    container_name: physicsdemos.app
     ports:
       - "80:80"
     volumes:
       - ./site:/site
       - ./apache2/sites-enabled/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
       - ./apache2/apache2.conf:/etc/apache2/apache2.conf
+    links:
+      - mysql
+  mysql:
+    image: mysql
+    container_name: physicsdemos.mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+    volumes:
+      # The database files will be saved on the
+      # host machine for persistency:
+      - /var/lib/docker/physicsdemos.mysql:/var/lib/mysql
