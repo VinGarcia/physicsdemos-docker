@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  site:
+  app:
     build: .
     image: physicsdemos
     container_name: physicsdemos.app
@@ -11,6 +11,7 @@ services:
       - ./site:/site
       - ./apache2/sites-enabled/000-default.conf:/etc/apache2/sites-enabled/000-default.conf
       - ./apache2/apache2.conf:/etc/apache2/apache2.conf
+      - ./physicsdemos-data:/mnt/physicsdemos-data
     links:
       - mysql
   mysql:
