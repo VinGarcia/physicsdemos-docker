@@ -6,7 +6,7 @@ login:
 	@# Login as root on netlex-site:
 	docker exec -it $(fullname) bash
 
-up:
+up: setup
 	@# Always rebuild netlex-site on deploy:
 	docker stop $(fullname) &> /dev/null || true
 	docker-compose up -d
@@ -19,7 +19,7 @@ logs:
 	@# composed containers:
 	docker-compose logs -f
 
-build: setup
+build:
 	@# Build/rebuild any images whose Dockerfile
 	@# might have changed since last build:
 	docker-compose build
