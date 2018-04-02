@@ -6,9 +6,9 @@ This project is the recommended way to deploy the physicsdemos website.
 
 First make sure you have all dependencies installed:
 
-1. git
-2. docker
-3. make
+1. `git`
+2. `docker` and `docker-compose`
+3. `make`
 
 Then proceed to clone this project **recursively**:
 
