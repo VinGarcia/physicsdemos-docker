@@ -1,4 +1,4 @@
-### Physicsdemos Docker
+## Physicsdemos Docker
 
 This project is the recommended way to deploy the physicsdemos website.
 
