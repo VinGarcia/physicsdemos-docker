@@ -34,11 +34,14 @@ setup: .setup.mk
 	@
 	@# Start mysql container:
 	@docker-compose up -d mysql
-	@# Wait until mysql container is ready:
-	@sleep 1
+	@
+	@echo 'Waiting until mysql container is ready for queries...'
+	@while ! docker exec physicsdemos.mysql mysql -u root -p1234 -e 'status' &> /dev/null; do sleep 1; done
+	@
 	@# Insert all the default video-data and users into the database:
-	@echo 'CREATE DATABASE IF NOT EXISTS physicsdemos;' | docker exec -i physicsdemos.mysql mysql -u root -p1234
+	@docker exec physicsdemos.mysql mysql -u root -p1234 -e 'CREATE DATABASE IF NOT EXISTS physicsdemos;'
 	@cat site/physicsdemos.sql | docker exec -i physicsdemos.mysql mysql physicsdemos -u root -p1234
+	@
 	@# Stop mysql container
 	@docker-compose stop mysql
 	@
