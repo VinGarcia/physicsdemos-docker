@@ -34,6 +34,14 @@ If you need to change the port used you may edit the
 `docker-compose.yml` file and replace "80:80" for "####:80"
 where "####" is the port you prefer.
 
+### Deploying the Videos
+
+Since the videos, pdfs and thumbnails are kept separated from the version control
+system you will need to download (or copy) the directory `physicsdemos-data`
+inside the root of this project.
+
+If you don't the website will still work but some assets will not show up.
+
 ### Commands
 
 The `Makefile` contain a few important commands:
