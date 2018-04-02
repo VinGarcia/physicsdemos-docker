@@ -1,7 +1,8 @@
+### Physicsdemos Docker
 
 This project is the recommended way to deploy the physicsdemos website.
 
-## Download and Setup
+### Download and Setup
 
 First make sure you have all dependencies installed:
 
@@ -15,7 +16,7 @@ Then proceed to clone this project **recursively**:
 git clone --recursive http://git.luar.dcc.ufmg.br/lfs/physicsdemos-docker.git
 ```
 
-> You will need access to the projects: `physicsdemos-docker` and `physicsdemos`;
+> You will need access to the repositories: `physicsdemos-docker` and `physicsdemos`;
 > If you don't have it yet ask the developer in charge to give it to you.
 
 Then build it:
