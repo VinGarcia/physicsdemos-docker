@@ -46,4 +46,4 @@ The `Makefile` contain a few important commands:
 Tips:
 
 1. To use composer or any php commands you must login into the app container.
-2. To quickly login into the app container use just `make`, which is equivalent to `make login container=app`.
+2. To quickly login into the app container use `make`, it's equivalent to `make login container=app`.
