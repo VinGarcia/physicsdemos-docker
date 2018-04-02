@@ -23,7 +23,7 @@ services:
     volumes:
       # The database files will be saved on the
       # host machine for persistency:
-      - /var/lib/docker/physicsdemos.mysql:/var/lib/mysql
+      - /var/lib/physicsdemos.mysql:/var/lib/mysql
   redis:
     image: redis
     container_name: physicsdemos.redis
