@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker exec -it physicsdemos.mysql mysql physicsdemos -u root -p $*
